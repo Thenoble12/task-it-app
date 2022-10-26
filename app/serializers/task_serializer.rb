@@ -1,10 +1,10 @@
 class TaskSerializer < ActiveModel::Serializer
-  attributes :id, :task, :notes, :category
+  attributes :id, :name, :details, :category, :user_id
 
   def show
     self.id
-    self.task
-    self.notes
+    self.name
+    self.details
     self.category
   end
 

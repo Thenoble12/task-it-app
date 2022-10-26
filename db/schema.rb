@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 2022_10_26_185247) do
   enable_extension "plpgsql"
 
   create_table "tasks", force: :cascade do |t|
-    t.string "task"
-    t.text "notes"
-    t.string "category"
+    t.string "name"
+    t.text "details"
+    t.integer "category"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -28,7 +28,7 @@ function TodoList() {
         category: taskCategory,
         user_id: taskUserId,
     }   
-
+    console.log(taskInfo)
     fetch(`/tasks`, {
         method: 'POST',
         headers: {
@@ -46,7 +46,7 @@ function TodoList() {
     const handleDelete = (e,id) => {
         e.preventDefault();
 
-        fetch(`tasks/${id}`, {
+        fetch(`/tasks/${id}`, {
             method: "DELETE",
         })
        .then((r) => r.json())
@@ -57,7 +57,7 @@ function TodoList() {
     }    
 
     useEffect(() => {
-        fetch(`${URL}tasks`)               
+        fetch(`/tasks`)               
         .then((r) => r.json())
         .then((tasksData) => {setTasks(tasksData)
                               console.log(tasks)

@@ -1,9 +1,10 @@
 class CreateTasks < ActiveRecord::Migration[6.1]
   def change
     create_table :tasks do |t|
-      t.string :task
-      t.text   :notes
-      t.string :category
+      t.string  :name
+      t.text    :details
+      t.integer :category
+      t.integer :user_id
 
       t.timestamps
     end
