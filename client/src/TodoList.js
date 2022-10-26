@@ -29,7 +29,7 @@ function TodoList() {
         user_id: taskUserId,
     }   
     console.log(taskInfo)
-    fetch(`/tasks`, {
+    fetch(`/new`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
