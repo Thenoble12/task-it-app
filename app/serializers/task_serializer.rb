@@ -7,5 +7,4 @@ class TaskSerializer < ActiveModel::Serializer
     self.details
     self.category
   end
-
 end
