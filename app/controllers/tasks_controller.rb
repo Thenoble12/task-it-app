@@ -12,7 +12,6 @@ class TasksController < ApplicationController
     
     def create
         task = Task.create(task_params)
-        puts "TASK IS HERE ==============>" + task
         render json: task, status: :created        
     end
 
